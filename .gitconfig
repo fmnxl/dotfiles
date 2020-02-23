@@ -1,0 +1,22 @@
+[user]
+	name = Freeman Latif
+	email = freemanon@gmail.com
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[mergetool]
+	keepBackup = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[push]
+	default = matching
+[alias]
+  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+

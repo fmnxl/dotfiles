@@ -10,6 +10,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'mcchrish/nnn.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -28,6 +30,15 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mhinz/vim-signify'
 
 let g:jsx_ext_required = 0
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 
 set tabstop=2
 set shiftwidth=2
